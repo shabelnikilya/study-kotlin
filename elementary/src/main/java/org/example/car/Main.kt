@@ -1,14 +1,11 @@
 package org.example.car
 
 private fun getCarBySpeed(speed: Int): Car {
-    val (description, color) =
-        if (speed < 100) {
-            Pair("Легковая машина", Color.BLACK)
-        } else if (speed > 100) {
-            Pair("Гоночная машина", Color.RED)
-        } else {
-            Pair("Универсальная машина", Color.YELLOW)
-        }
+    val (description, color) = when {
+        speed < 100 -> "Легковая машина" to Color.BLACK
+        speed >= 100 -> "Гоночная машина" to Color.RED
+        else -> "Универсальная машина" to Color.YELLOW
+    }
     return Car(description, color)
 }
 
