@@ -9,5 +9,8 @@ public class Main {
     public static void main(String[] args) {
         int randomInt = Function.randomInt();
         System.out.println(randomInt);
+
+        DisplayUtils.displaySeparator();
+        DisplayUtils.displaySeparator('-', 5);
     }
 }
