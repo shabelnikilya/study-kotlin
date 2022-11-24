@@ -13,6 +13,11 @@ fun main(args: Array<String>) {
 
     val s3 = "   "
     s3.isEmptyOrNull() eq false
+
+    val line = "Hello"
+    var secondLinde: String? = null
+    println((line as? String)?.uppercase())
+    println((secondLinde as? String)?.uppercase())
 }
 
 private infix fun Boolean.eq(b: Boolean) {
